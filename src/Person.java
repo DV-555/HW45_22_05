@@ -11,6 +11,7 @@ public class Person implements Comparable<Person> {
   SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
   public Person(String name, String birthDay) throws ParseException {
+
     this.name = name;
     this.birthDay = formatter.parse(birthDay);
   }
