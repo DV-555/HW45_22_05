@@ -13,7 +13,6 @@ public class Main {
     persons.add(person1);
     persons.add(person2);
 
-
     Collections.sort(persons);
     System.out.println(persons);
   }
