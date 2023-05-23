@@ -1,14 +1,18 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Person implements Comparable <Person> {
 
+
   private final String name;
   private final Date birthDay;
 
+  SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
-  public Person(String name, int birthDay){
+  public Person(String name, String birthDay)throws ParseException{
     this.name= name;
-    this.birthDay= birthDay;
+    this.birthDay= formatter.parse(birthDay);
   }
 
   public String getName() {
@@ -24,12 +28,12 @@ public class Person implements Comparable <Person> {
   public String toString() {
     return "Person{" +
         "name='" + name + '\'' +
-        ", birthDay='" + birthDay + '\'' +
+        ", birthDay='" + formatter.format(birthDay) + '\'' +
         '}';
   }
 
   @Override
   public int compareTo(Person o) {
-    return 0;
+    return birthDay.compareTo(o.birthDay);
   }
 }
