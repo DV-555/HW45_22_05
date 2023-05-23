@@ -23,3 +23,10 @@ public class Main {
     System.out.println("\n" + "After comparison " + "\n" + persons);
   }
 }
+// Output:
+
+// Before comparison
+//[Jack10.05.2000, John11.05.1980, Dan02.02.2005, Max01.01.1975]
+
+//After comparison
+//[Dan02.02.2005, Jack10.05.2000, John11.05.1980, Max01.01.1975]
