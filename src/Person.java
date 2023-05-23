@@ -26,14 +26,12 @@ public class Person implements Comparable<Person> {
 
   @Override
   public String toString() {
-    return "Person{" +
-        "name='" + name + '\'' +
-        ", birthDay='" + formatter.format(birthDay) + '\'' +
-        '}';
+    return name + formatter.format(birthDay);
+
   }
 
   @Override
   public int compareTo(Person o) {
-    return birthDay.compareTo(o.birthDay);
+    return o.birthDay.compareTo(birthDay);
   }
 }
